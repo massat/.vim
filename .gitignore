@@ -1,2 +1,1 @@
-bundle/.neobundle
-bundle/NeoBundle.lock
+bundle/*

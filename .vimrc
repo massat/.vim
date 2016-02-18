@@ -4,16 +4,23 @@ set nocompatible
 """"""""""""""""""""
 " NeoBundle
 """"""""""""""""""""
-" Required:
+filetype off
+
 set runtimepath^=~/.vim/bundle/neobundle.vim/
 call neobundle#begin(expand('~/.vim/bundle/'))
 
 NeoBundleFetch 'Shougo/neobundle.vim'
+
+NeoBundle 'Shougo/unite.vim'
+NeoBundle 'scrooloose/nerdtree'
+
 call neobundle#end()
 
 filetype plugin indent on
 
 NeoBundleCheck
+
+runtime settings/unite.vim
 
 """"""""""""""""""""
 " basic settings
