@@ -21,6 +21,7 @@ filetype plugin indent on
 NeoBundleCheck
 
 runtime settings/unite.vim
+runtime settings/nerdtree.vim
 
 """"""""""""""""""""
 " basic settings
