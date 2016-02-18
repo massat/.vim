@@ -13,6 +13,7 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'scrooloose/nerdtree'
+NeoBundle 'Shougo/neomru.vim'
 NeoBundle 'Shougo/unite.vim'
 
 call neobundle#end()
