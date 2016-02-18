@@ -11,6 +11,7 @@ call neobundle#begin(expand('~/.vim/bundle/'))
 
 NeoBundleFetch 'Shougo/neobundle.vim'
 
+NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'Shougo/unite.vim'
 
@@ -22,6 +23,7 @@ NeoBundleCheck
 
 runtime settings/nerdtree.vim
 runtime settings/unite.vim
+runtime settings/fugitive.vim
 
 """"""""""""""""""""
 " basic settings
