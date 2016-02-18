@@ -11,8 +11,8 @@ call neobundle#begin(expand('~/.vim/bundle/'))
 
 NeoBundleFetch 'Shougo/neobundle.vim'
 
-NeoBundle 'Shougo/unite.vim'
 NeoBundle 'scrooloose/nerdtree'
+NeoBundle 'Shougo/unite.vim'
 
 call neobundle#end()
 
@@ -20,8 +20,8 @@ filetype plugin indent on
 
 NeoBundleCheck
 
-runtime settings/unite.vim
 runtime settings/nerdtree.vim
+runtime settings/unite.vim
 
 """"""""""""""""""""
 " basic settings
