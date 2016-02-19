@@ -33,9 +33,9 @@ filetype plugin indent on
 
 NeoBundleCheck
 
-runtime settings/nerdtree.vim
-runtime settings/unite.vim
-runtime settings/fugitive.vim
+source ~/.vim/settings/nerdtree.vim
+source ~/.vim/settings/unite.vim
+source ~/.vim/settings/fugitive.vim
 
 """"""""""""""""""""
 " basic settings
