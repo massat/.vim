@@ -2,10 +2,17 @@
 """"""""""""""""""""""""""""""
 " Unit.vimの設定
 """"""""""""""""""""""""""""""
+" insert modeで開始
+let g:unite_enable_start_insert = 1
+
+" 大文字小文字を区別しない
+let g:unite_enable_ignore_case = 1
+let g:unite_enable_smart_case = 1
+
 " バッファと最近使ったファイル一覧
-noremap <C-T> :UniteWithProjectDir buffer file_mru bookmark -start-insert<CR>
-" 全体から検索
-noremap <C-]> :UniteWithProjectDir file_rec/async -start-insert<CR>
+noremap <C-T> :UniteWithProjectDir buffer file_mru bookmark<CR>
+" プロジェクト全体から検索
+noremap <C-P> :UniteWithProjectDir file_rec/async<CR>
 
 " ウィンドウを分割して開く
 au FileType unite nnoremap <silent> <buffer> <expr> <C-S> unite#do_action('split')
@@ -18,3 +25,18 @@ au FileType unite inoremap <silent> <buffer> <expr> <C-V> unite#do_action('vspli
 au FileType unite nnoremap <silent> <buffer> <ESC><ESC> :q<CR>
 au FileType unite inoremap <silent> <buffer> <ESC><ESC> <ESC>:q<CR>
 
+" grep検索
+nnoremap <silent> ,g  :<C-u>Unite grep: -buffer-name=search-buffer<CR>
+
+" カーソル位置の単語をgrep検索
+nnoremap <silent> ,cg :<C-u>Unite grep: -buffer-name=search-buffer<CR><C-R><C-W>
+
+" grep検索結果の再呼出
+nnoremap <silent> ,r  :<C-u>UniteResume search-buffer<CR>
+
+"unite grep に ag(The Silver Searcher) を使う
+if executable('ag')
+  let g:unite_source_grep_command = 'ag'
+  let g:unite_source_grep_default_opts = '--nogroup --nocolor --column'
+  let g:unite_source_grep_recursive_opt = ''
+endif
