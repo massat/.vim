@@ -10,7 +10,7 @@ let g:unite_enable_ignore_case = 1
 let g:unite_enable_smart_case = 1
 
 " バッファと最近使ったファイル一覧
-noremap <C-T> :UniteWithProjectDir buffer file_mru bookmark<CR>
+noremap <C-T> :Unite buffer file_mru bookmark<CR>
 " プロジェクト全体から検索
 noremap <C-P> :UniteWithProjectDir file_rec/async<CR>
 
