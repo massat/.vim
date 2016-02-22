@@ -66,6 +66,7 @@ colorscheme desert
 
 "" utilities
 set autoindent
+set clipboard=unnamed,autoselect
 set hlsearch
 set incsearch
 set smartcase
