@@ -13,6 +13,11 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'scrooloose/nerdtree'
+
+if has('lua')
+  NeoBundle 'Shougo/neocomplete.vim'
+endif
+
 NeoBundle 'Shougo/neomru.vim'
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/vimproc.vim', {
@@ -33,6 +38,7 @@ filetype plugin indent on
 
 NeoBundleCheck
 
+source ~/.vim/settings/neocomplete.vim
 source ~/.vim/settings/nerdtree.vim
 source ~/.vim/settings/unite.vim
 source ~/.vim/settings/fugitive.vim
