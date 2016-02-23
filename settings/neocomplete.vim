@@ -59,6 +59,10 @@ autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
 autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 
+if empty(neobundle#get("jedi-vim"))
+  autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
+endif
+
 " Enable heavy omni completion.
 if !exists('g:neocomplete#sources#omni#input_patterns')
   let g:neocomplete#sources#omni#input_patterns = {}
