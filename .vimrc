@@ -11,6 +11,7 @@ call neobundle#begin(expand('~/.vim/bundle/'))
 
 NeoBundleFetch 'Shougo/neobundle.vim'
 
+NeoBundle 'glidenote/memolist.vim'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'scrooloose/nerdtree'
 
@@ -38,6 +39,7 @@ filetype plugin indent on
 
 NeoBundleCheck
 
+source ~/.vim/settings/memolist.vim
 source ~/.vim/settings/neocomplete.vim
 source ~/.vim/settings/nerdtree.vim
 source ~/.vim/settings/unite.vim
