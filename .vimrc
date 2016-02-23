@@ -11,6 +11,9 @@ call neobundle#begin(expand('~/.vim/bundle/'))
 
 NeoBundleFetch 'Shougo/neobundle.vim'
 
+NeoBundleLazy 'davidhalter/jedi-vim', {
+      \ "autoload": { "filetypes": [ "python", "python3" ] }}
+
 NeoBundle 'glidenote/memolist.vim'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'scrooloose/nerdtree'
@@ -39,11 +42,14 @@ filetype plugin indent on
 
 NeoBundleCheck
 
+source ~/.vim/settings/jedi.vim
 source ~/.vim/settings/memolist.vim
 source ~/.vim/settings/neocomplete.vim
 source ~/.vim/settings/nerdtree.vim
 source ~/.vim/settings/unite.vim
 source ~/.vim/settings/fugitive.vim
+
+
 
 """"""""""""""""""""
 " basic settings
