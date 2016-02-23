@@ -91,3 +91,4 @@ set smartindent
 set smarttab
 set wildmenu
 
+autocmd BufWritePre * :%s/\s\+$//ge " 行末の空白を削除
