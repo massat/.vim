@@ -59,6 +59,9 @@ set tabstop=2
 "" use LF
 set fileformat=unix
 
+"" keys
+set backspace=indent,eol,start
+
 "" surfaces
 set cmdheight=2
 set laststatus=2
