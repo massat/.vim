@@ -66,6 +66,7 @@ set tabstop=2
 set fileformat=unix
 
 "" keys
+let mapleader=","
 set backspace=indent,eol,start
 
 "" surfaces
