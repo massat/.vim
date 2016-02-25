@@ -49,8 +49,6 @@ source ~/.vim/settings/nerdtree.vim
 source ~/.vim/settings/unite.vim
 source ~/.vim/settings/fugitive.vim
 
-
-
 """"""""""""""""""""
 " basic settings
 """"""""""""""""""""
@@ -67,7 +65,13 @@ set fileformat=unix
 
 "" keys
 let mapleader=","
+noremap <silent> <C-B><C-B> :bnext<CR>
 set backspace=indent,eol,start
+
+""" tabs
+noremap <silent> <C-T><C-T> :tabnew<CR>
+noremap <silent> <C-L> :tabnext<CR>
+noremap <silent> <C-H> :tabprevious<CR>
 
 "" surfaces
 set cmdheight=2

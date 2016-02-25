@@ -10,7 +10,7 @@ let g:unite_enable_ignore_case = 1
 let g:unite_enable_smart_case = 1
 
 " バッファと最近使ったファイル一覧
-noremap <C-T> :Unite buffer file_mru bookmark<CR>
+noremap <C-P> :Unite buffer file_mru bookmark<CR>
 
 " ウィンドウを分割して開く
 au FileType unite nnoremap <silent> <buffer> <expr> <C-S> unite#do_action('split')
