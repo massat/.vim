@@ -11,8 +11,6 @@ let g:unite_enable_smart_case = 1
 
 " バッファと最近使ったファイル一覧
 noremap <C-T> :Unite buffer file_mru bookmark<CR>
-" プロジェクト全体から検索
-noremap <C-P> :UniteWithProjectDir file_rec/async<CR>
 
 " ウィンドウを分割して開く
 au FileType unite nnoremap <silent> <buffer> <expr> <C-S> unite#do_action('split')
