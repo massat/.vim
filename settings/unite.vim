@@ -11,6 +11,7 @@ let g:unite_enable_smart_case = 1
 
 " バッファと最近使ったファイル一覧
 noremap <C-P> :Unite buffer file_mru bookmark<CR>
+noremap <C-_> :Unite line<CR>
 
 " default_action を tabopen にする
 call unite#custom#default_action('file', 'tabopen')
