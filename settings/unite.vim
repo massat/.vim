@@ -12,6 +12,9 @@ let g:unite_enable_smart_case = 1
 " バッファと最近使ったファイル一覧
 noremap <C-P> :Unite buffer file_mru bookmark<CR>
 
+" default_action を tabopen にする
+call unite#custom#default_action('file', 'tabopen')
+
 " ウィンドウを分割して開く
 au FileType unite nnoremap <silent> <buffer> <expr> <C-S> unite#do_action('split')
 au FileType unite inoremap <silent> <buffer> <expr> <C-S> unite#do_action('split')
