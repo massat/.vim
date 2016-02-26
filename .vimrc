@@ -81,6 +81,7 @@ set statusline+=%<%f\ %m%r%h%w%{'['.(&fenc!=''?&fenc:&enc).']['.&ff.']'}%=%l,%c%
 set title
 
 syntax on
+set t_Co=256
 colorscheme jellybeans
 
 "" utilities
