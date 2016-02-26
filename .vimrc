@@ -65,7 +65,7 @@ set fileformat=unix
 
 "" keys
 let mapleader=","
-noremap <silent> <C-B><C-B> :bnext<CR>
+noremap <silent> <C-B> :bnext<CR>
 set backspace=indent,eol,start
 
 """ tabs
