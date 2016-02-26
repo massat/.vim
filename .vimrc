@@ -42,13 +42,6 @@ filetype plugin indent on
 
 NeoBundleCheck
 
-source ~/.vim/settings/jedi.vim
-source ~/.vim/settings/memolist.vim
-source ~/.vim/settings/neocomplete.vim
-source ~/.vim/settings/nerdtree.vim
-source ~/.vim/settings/unite.vim
-source ~/.vim/settings/fugitive.vim
-
 """"""""""""""""""""
 " basic settings
 """"""""""""""""""""
@@ -97,3 +90,11 @@ set smarttab
 set wildmenu
 
 autocmd BufWritePre * :%s/\s\+$//ge " 行末の空白を削除
+
+source ~/.vim/settings/jedi.vim
+source ~/.vim/settings/memolist.vim
+source ~/.vim/settings/neocomplete.vim
+source ~/.vim/settings/nerdtree.vim
+source ~/.vim/settings/unite.vim
+source ~/.vim/settings/fugitive.vim
+
