@@ -37,6 +37,9 @@ NeoBundle 'sophacles/vim-bundle-mako'
 " ログファイルを色づけしてくれる
 NeoBundle 'vim-scripts/AnsiEsc.vim'
 
+" colorscheme
+NeoBundle 'nanotech/jellybeans.vim'
+
 call neobundle#end()
 
 filetype plugin indent on
@@ -78,7 +81,7 @@ set statusline+=%<%f\ %m%r%h%w%{'['.(&fenc!=''?&fenc:&enc).']['.&ff.']'}%=%l,%c%
 set title
 
 syntax on
-colorscheme desert
+colorscheme jellybeans
 
 "" utilities
 set autoindent
