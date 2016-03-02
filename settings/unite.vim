@@ -10,14 +10,16 @@ let g:unite_enable_ignore_case = 1
 let g:unite_enable_smart_case = 1
 
 " バッファと最近使ったファイル一覧
-noremap <C-P> :Unite buffer file_mru bookmark<CR>
-noremap <C-_> :Unite line<CR>
+noremap <C-P> :<C-u>Unite buffer file_mru bookmark<CR>
+
+" Ctrl+/
+noremap <C-_> :<C-u>Unite line<CR>
 
 " grep検索
 nnoremap <silent> <C-G> :<C-u>Unite grep: -buffer-name=search-buffer<CR>
 
-" grep検索結果の再呼出
-nnoremap <silent> ,r  :<C-u>UniteResume search-buffer<CR>
+" Uniteの再呼出
+nnoremap <silent> <S-U> :<C-u>UniteResume<CR>
 
 " ウィンドウを分割して開く
 au FileType unite nnoremap <silent> <buffer> <expr> <C-s> unite#do_action('split')
