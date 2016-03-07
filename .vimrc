@@ -66,7 +66,7 @@ noremap <silent> <C-B> :bnext<CR>
 set backspace=indent,eol,start
 
 """ tabs
-noremap <silent> <C-T><C-T> :tabnew<CR>
+noremap <silent> tt :tabnew<CR>
 noremap <silent> <C-L> :tabnext<CR>
 noremap <silent> <C-H> :tabprevious<CR>
 

@@ -10,7 +10,7 @@ let g:unite_enable_ignore_case = 1
 let g:unite_enable_smart_case = 1
 
 " バッファと最近使ったファイル一覧
-noremap <C-P> :<C-u>Unite buffer file_mru bookmark<CR>
+noremap <C-T> :<C-u>Unite buffer file_mru bookmark<CR>
 
 " Ctrl+/
 noremap <C-_> :<C-u>Unite line<CR>
