@@ -11,6 +11,7 @@ call neobundle#begin(expand('~/.vim/bundle/'))
 
 NeoBundleFetch 'Shougo/neobundle.vim'
 
+NeoBundle 'bling/vim-airline'
 NeoBundleLazy 'davidhalter/jedi-vim', {
       \ "autoload": { "filetypes": [ "python", "python3" ] }}
 
@@ -77,7 +78,6 @@ set number
 set ruler
 set showcmd
 set showmatch
-set statusline+=%<%f\ %m%r%h%w%{'['.(&fenc!=''?&fenc:&enc).']['.&ff.']'}%=%l,%c%V%8P
 set title
 
 syntax on
@@ -96,6 +96,7 @@ set wildmenu
 
 autocmd BufWritePre * :%s/\s\+$//ge " 行末の空白を削除
 
+source ~/.vim/settings/airline.vim
 source ~/.vim/settings/jedi.vim
 source ~/.vim/settings/memolist.vim
 source ~/.vim/settings/neocomplete.vim
