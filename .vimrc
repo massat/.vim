@@ -51,6 +51,7 @@ NeoBundleCheck
 """"""""""""""""""""
 " basic settings
 """"""""""""""""""""
+set autoread
 set noswapfile
 
 "" indent
