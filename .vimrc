@@ -16,6 +16,7 @@ NeoBundleLazy 'davidhalter/jedi-vim', {
       \ "autoload": { "filetypes": [ "python", "python3" ] }}
 
 NeoBundle 'glidenote/memolist.vim'
+NeoBundle 'nathanaelkane/vim-indent-guides'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'scrooloose/nerdtree'
 
