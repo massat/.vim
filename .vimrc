@@ -25,6 +25,8 @@ if has('lua')
 endif
 
 NeoBundle 'Shougo/neomru.vim'
+NeoBundle 'Shougo/neosnippet.vim'
+NeoBundle 'Shougo/neosnippet-snippets'
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/vimproc.vim', {
 \ 'build' : {
