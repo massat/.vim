@@ -16,6 +16,11 @@ NeoBundleLazy 'davidhalter/jedi-vim', {
       \ "autoload": { "filetypes": [ "python", "python3" ] }}
 
 NeoBundle 'glidenote/memolist.vim'
+
+if executable('ctags')
+  NeoBundle 'majutsushi/tagbar'
+endif
+
 NeoBundle 'nathanaelkane/vim-indent-guides'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'scrooloose/nerdtree'
@@ -105,6 +110,7 @@ source ~/.vim/settings/jedi.vim
 source ~/.vim/settings/memolist.vim
 source ~/.vim/settings/neocomplete.vim
 source ~/.vim/settings/nerdtree.vim
+source ~/.vim/settings/tagbar.vim
 source ~/.vim/settings/unite.vim
 source ~/.vim/settings/fugitive.vim
 
