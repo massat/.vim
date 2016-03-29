@@ -22,6 +22,10 @@ if executable('ctags')
 endif
 
 NeoBundle 'nathanaelkane/vim-indent-guides'
+if executable('flake8')
+  NeoBundleLazy 'nvie/vim-flake8', {
+      \ "autoload": { "filetypes": [ "python", "python3" ] }}
+endif
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'scrooloose/nerdtree'
 
