@@ -15,8 +15,9 @@ let g:neocomplete#lock_buffer_name_pattern = '\*ku\*'
 let g:neocomplete#sources#dictionary#dictionaries = {
     \ 'default' : '',
     \ 'vimshell' : $HOME.'/.vimshell_hist',
-    \ 'scheme' : $HOME.'/.gosh_completions'
-        \ }
+    \ 'scheme' : $HOME.'/.gosh_completions',
+    \ 'php' : $HOME.'/.vim/dictionaries/php.dict'
+    \ }
 
 " Define keyword.
 if !exists('g:neocomplete#keyword_patterns')
