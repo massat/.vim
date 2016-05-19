@@ -15,6 +15,7 @@ NeoBundle 'bling/vim-airline'
 NeoBundleLazy 'davidhalter/jedi-vim', {
       \ "autoload": { "filetypes": [ "python", "python3" ] }}
 
+NeoBundle 'fatih/vim-go'
 NeoBundle 'glidenote/memolist.vim'
 
 if executable('ctags')
