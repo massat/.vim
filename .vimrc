@@ -21,12 +21,14 @@ if executable('ctags')
   NeoBundle 'majutsushi/tagbar'
 endif
 
+" colorscheme
+NeoBundle 'nanotech/jellybeans.vim'
+
 NeoBundle 'nathanaelkane/vim-indent-guides'
 if executable('flake8')
   NeoBundleLazy 'nvie/vim-flake8', {
       \ "autoload": { "filetypes": [ "python", "python3" ] }}
 endif
-NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'scrooloose/nerdtree'
 
 if has('lua')
@@ -47,11 +49,10 @@ NeoBundle 'Shougo/vimproc.vim', {
 \    },
 \ }
 NeoBundle 'sophacles/vim-bundle-mako'
+NeoBundle 'tpope/vim-fugitive'
+
 " ログファイルを色づけしてくれる
 NeoBundle 'vim-scripts/AnsiEsc.vim'
-
-" colorscheme
-NeoBundle 'nanotech/jellybeans.vim'
 
 call neobundle#end()
 
