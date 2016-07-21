@@ -50,6 +50,7 @@ NeoBundle 'Shougo/vimproc.vim', {
 \    },
 \ }
 NeoBundle 'sophacles/vim-bundle-mako'
+NeoBundle 'thinca/vim-quickrun'
 NeoBundle 'tpope/vim-fugitive'
 
 " ログファイルを色づけしてくれる
@@ -116,6 +117,7 @@ source ~/.vim/settings/jedi.vim
 source ~/.vim/settings/memolist.vim
 source ~/.vim/settings/neocomplete.vim
 source ~/.vim/settings/nerdtree.vim
+source ~/.vim/settings/quickrun.vim
 source ~/.vim/settings/tagbar.vim
 source ~/.vim/settings/unite.vim
 source ~/.vim/settings/fugitive.vim
