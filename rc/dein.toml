@@ -1,0 +1,48 @@
+[[plugins]]
+repo = 'Shougo/dein.vim'
+
+[[plugins]]
+repo = 'Shougo/unite.vim'
+depends = 'neomru.vim'
+hook_source = 'source ~/.vim/rc/plugins/unite.vim'
+
+[[plugins]]
+repo = 'bling/vim-airline'
+hook_source = 'source ~/.vim/rc/plugins/airline.vim'
+
+[[plugins]]
+repo = 'fatih/vim-go'
+on_ft = 'go'
+
+[[plugins]]
+repo = 'glidenote/memolist.vim'
+hook_source = 'source ~/.vim/rc/plugins/memolist.vim'
+
+[[plugins]]
+repo = 'majutsushi/tagbar'
+if = 'executable("ctags")'
+hook_source = 'source ~/.vim/rc/plugins/tagbar.vim'
+
+[[plugins]]
+repo = 'nanotech/jellybeans.vim'
+
+[[plugins]]
+repo = 'scrooloose/nerdtree'
+hook_source = 'source ~/.vim/rc/plugins/nerdtree.vim'
+
+[[plugins]]
+repo = 'Shougo/vimproc.vim'
+build = 'make'
+
+[[plugins]]
+repo = 'thinca/vim-quickrun'
+
+[[plugins]]
+repo = 'tpope/vim-fugitive'
+hook_source = 'source ~/.vim/rc/plugins/fugitive.vim'
+
+[[plugins]]
+repo = 'vim-scripts/AnsiEsc.vim'
+
+[[plugins]]
+repo = 'nathanaelkane/vim-indent-guides'

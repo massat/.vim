@@ -1,66 +1,34 @@
 " be improved
-set nocompatible
-
-""""""""""""""""""""
-" NeoBundle
-""""""""""""""""""""
-filetype off
-
-set runtimepath^=~/.vim/bundle/neobundle.vim/
-call neobundle#begin(expand('~/.vim/bundle/'))
-
-NeoBundleFetch 'Shougo/neobundle.vim'
-
-NeoBundle 'bling/vim-airline'
-NeoBundleLazy 'davidhalter/jedi-vim', {
-      \ "autoload": { "filetypes": [ "python", "python3" ] }}
-
-NeoBundle 'fatih/vim-go'
-NeoBundle 'glidenote/memolist.vim'
-
-if executable('ctags')
-  NeoBundle 'majutsushi/tagbar'
+if &compatible
+  set nocompatible
 endif
 
-" colorscheme
-NeoBundle 'nanotech/jellybeans.vim'
+" Define function to load setting files.
+" https://github.com/Shougo/shougo-s-github/blob/master/vim/rc/vimrc
+function! s:source_rc(path, ...) abort "{{{
+  let use_global = get(a:000, 0, !has('vim_starting'))
+  let abspath = resolve(expand('~/.vim/rc/' . a:path))
+  if !use_global
+    execute 'source' fnameescape(abspath)
+    return
+  endif
 
-NeoBundle 'nathanaelkane/vim-indent-guides'
-if executable('flake8')
-  NeoBundleLazy 'nvie/vim-flake8', {
-      \ "autoload": { "filetypes": [ "python", "python3" ] }}
-endif
-NeoBundle 'scrooloose/nerdtree'
+  " substitute all 'set' to 'setglobal'
+  let content = map(readfile(abspath),
+        \ 'substitute(v:val, "^\\W*\\zsset\\ze\\W", "setglobal", "")')
+  " create tempfile and source the tempfile
+  let tempfile = tempname()
+  try
+    call writefile(content, tempfile)
+    execute printf('source %s', fnameescape(tempfile))
+  finally
+    if filereadable(tempfile)
+      call delete(tempfile)
+    endif
+  endtry
+endfunction"}}}
 
-if has('lua')
-  NeoBundle 'Shougo/neocomplete.vim'
-endif
-
-NeoBundle 'Shougo/neomru.vim'
-NeoBundle 'Shougo/neosnippet.vim'
-NeoBundle 'Shougo/neosnippet-snippets'
-NeoBundle 'Shougo/unite.vim'
-NeoBundle 'Shougo/vimproc.vim', {
-\ 'build' : {
-\     'windows' : 'tools\\update-dll-mingw',
-\     'cygwin' : 'make -f make_cygwin.mak',
-\     'mac' : 'make',
-\     'linux' : 'make',
-\     'unix' : 'gmake',
-\    },
-\ }
-NeoBundle 'sophacles/vim-bundle-mako'
-NeoBundle 'thinca/vim-quickrun'
-NeoBundle 'tpope/vim-fugitive'
-
-" ログファイルを色づけしてくれる
-NeoBundle 'vim-scripts/AnsiEsc.vim'
-
-call neobundle#end()
-
-filetype plugin indent on
-
-NeoBundleCheck
+call s:source_rc('dein.vim')
 
 """"""""""""""""""""
 " basic settings
@@ -111,14 +79,3 @@ set smarttab
 set wildmenu
 
 autocmd BufWritePre * :%s/\s\+$//ge " 行末の空白を削除
-
-source ~/.vim/settings/airline.vim
-source ~/.vim/settings/jedi.vim
-source ~/.vim/settings/memolist.vim
-source ~/.vim/settings/neocomplete.vim
-source ~/.vim/settings/nerdtree.vim
-source ~/.vim/settings/quickrun.vim
-source ~/.vim/settings/tagbar.vim
-source ~/.vim/settings/unite.vim
-source ~/.vim/settings/fugitive.vim
-
