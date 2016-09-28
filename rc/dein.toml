@@ -46,6 +46,3 @@ repo = 'vim-scripts/AnsiEsc.vim'
 
 [[plugins]]
 repo = 'nathanaelkane/vim-indent-guides'
-
-[[pluginss]]
-repo = ''
