@@ -60,7 +60,7 @@ autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
 autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 
-if empty(neobundle#get("jedi-vim"))
+if empty(dein#get("jedi-vim"))
   autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
 endif
 

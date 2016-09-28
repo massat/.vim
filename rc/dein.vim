@@ -8,10 +8,6 @@ let g:dein#enable_notification = 1
 let s:path = expand('$HOME/.vim/dein')
 set runtimepath^=~/.vim/dein/repos/github.com/Shougo/dein.vim
 
-if !dein#load_state(s:path)
-  finish
-endif
-
 filetype off
 
 call dein#begin(s:path, [expand('<sfile>')]

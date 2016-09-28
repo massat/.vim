@@ -2,6 +2,11 @@
 repo = 'Shougo/dein.vim'
 
 [[plugins]]
+repo = 'Shougo/unite.vim'
+depends = 'neomru.vim'
+hook_source = 'source ~/.vim/rc/plugins/unite.vim'
+
+[[plugins]]
 repo = 'bling/vim-airline'
 hook_source = 'source ~/.vim/rc/plugins/airline.vim'
 
@@ -34,9 +39,13 @@ repo = 'thinca/vim-quickrun'
 
 [[plugins]]
 repo = 'tpope/vim-fugitive'
+hook_source = 'source ~/.vim/rc/plugins/fugitive.vim'
 
 [[plugins]]
 repo = 'vim-scripts/AnsiEsc.vim'
 
 [[plugins]]
 repo = 'nathanaelkane/vim-indent-guides'
+
+[[pluginss]]
+repo = ''

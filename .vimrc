@@ -30,17 +30,6 @@ endfunction"}}}
 
 call s:source_rc('dein.vim')
 
-"NeoBundleLazy 'davidhalter/jedi-vim', {
-"      \ "autoload": { "filetypes": [ "python", "python3" ] }}
-"
-"
-"
-"if executable('flake8')
-"  NeoBundleLazy 'nvie/vim-flake8', {
-"      \ "autoload": { "filetypes": [ "python", "python3" ] }}
-"endif
-"
-
 """"""""""""""""""""
 " basic settings
 """"""""""""""""""""
@@ -77,7 +66,7 @@ set title
 
 syntax on
 set t_Co=256
-"colorscheme jellybeans
+colorscheme jellybeans
 
 "" utilities
 set autoindent
@@ -90,6 +79,3 @@ set smarttab
 set wildmenu
 
 autocmd BufWritePre * :%s/\s\+$//ge " 行末の空白を削除
-
-"source ~/.vim/settings/fugitive.vim
-"

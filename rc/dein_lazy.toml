@@ -19,12 +19,11 @@ on_event = 'InsertCharPre'
 on_ft = 'snippet'
 
 [[plugins]]
-repo = 'Shougo/unite.vim'
-depends = 'neomru.vim'
-hook_source = 'source ~/.vim/rc/plugins/unite.vim'
+repo = 'Shougo/neosnippet-snippets'
 
 [[plugins]]
 repo = 'davidhalter/jedi-vim'
+depends = 'neocomplete.vim'
 on_ft = 'python'
 hook_source = 'source ~/.vim/rc/plugins/jedi.vim'
 
