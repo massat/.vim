@@ -70,7 +70,7 @@ colorscheme jellybeans
 
 "" utilities
 set autoindent
-set clipboard=unnamed,autoselect
+set clipboard+=unnamedplus
 set hlsearch
 set incsearch
 set smartcase
