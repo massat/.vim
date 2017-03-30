@@ -2,6 +2,11 @@
 repo = 'Shougo/dein.vim'
 
 [[plugins]]
+repo = 'Shougo/deoplete.nvim'
+if = 'has("python3")'
+hook_source = 'source ~/.vim/rc/plugins/deoplete.vim'
+
+[[plugins]]
 repo = 'Shougo/unite.vim'
 depends = 'neomru.vim'
 hook_source = 'source ~/.vim/rc/plugins/unite.vim'

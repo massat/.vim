@@ -4,11 +4,6 @@ on_if = 1
 on_source = ['unite.vim']
 
 [[plugins]]
-repo = 'Shougo/deoplete.nvim'
-if = 'has("python3")'
-hook_source = 'source ~/.vim/rc/plugins/deoplete.vim'
-
-[[plugins]]
 repo = 'Shougo/neosnippet.vim'
 depends = ['neosnippet-snippets', 'context_filetype.vim']
 on_event = 'InsertCharPre'
