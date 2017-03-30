@@ -18,9 +18,10 @@ on_ft = 'snippet'
 repo = 'Shougo/neosnippet-snippets'
 
 [[plugins]]
-repo = 'zchee/deoplete-jedi'
+repo = 'davidhalter/jedi-vim'
 depends = ['deoplete.nvim']
 on_ft = 'python'
+hook_source = 'source ~/.vim/rc/plugins/jedi.vim'
 
 [[plugins]]
 repo = 'nvie/vim-flake8'
