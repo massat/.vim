@@ -74,6 +74,7 @@ set autoindent
 set clipboard+=unnamedplus
 set hlsearch
 set incsearch
+set mouse-=a
 set smartcase
 set smartindent
 set smarttab
